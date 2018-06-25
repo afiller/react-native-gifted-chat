@@ -1,6 +1,5 @@
 'use strict'
 
-import createReactClass from 'create-react-class'
 import PropTypes from 'prop-types'
 import React, {Component} from 'react'
 import cloneReferencedElement from 'react-clone-referenced-element'
