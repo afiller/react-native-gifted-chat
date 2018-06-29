@@ -3985,9 +3985,9 @@ react-native-lightbox@^0.7.0:
   dependencies:
     prop-types "^15.5.10"
 
-"react-native-parsed-text@git+https://github.com/PeterKottas/react-native-parsed-text#2a51e33fcd2c04ca7f2da0c8f5e46c7504faf5b0":
+"react-native-parsed-text@git+https://github.com/afiller/react-native-parsed-text.git":
   version "0.0.20"
-  resolved "git+https://github.com/PeterKottas/react-native-parsed-text#2a51e33fcd2c04ca7f2da0c8f5e46c7504faf5b0"
+  resolved "git+https://github.com/afiller/react-native-parsed-text.git#297bce2907ee3704c9c8d993597266ee61b7f0af"
   dependencies:
     babel-plugin-check-es2015-constants "6.22.0"
     prop-types "^15.5.10"
