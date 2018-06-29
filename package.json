@@ -63,7 +63,7 @@
   "dependencies": {
     "@expo/react-native-action-sheet": "git+https://github.com/afiller/react-native-action-sheet.git",
     "md5": "2.2.1",
-    "moment": "^2.19.0",
+    "moment": "^2.22.2",
     "prop-types": "15.6.0",
     "react-clone-referenced-element": "^1.0.1",
     "react-native-communications": "2.2.1",
