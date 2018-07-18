@@ -6,7 +6,9 @@ import cloneReferencedElement from 'react-clone-referenced-element'
 import {
   ScrollView,
   StyleSheet,
-  View
+  View,
+  findNodeHandle,
+  Platform
 } from 'react-native'
 import ScrollableMixin from 'react-native-scrollable-mixin'
 
@@ -27,6 +29,27 @@ class InvertibleScrollView extends Component {
 
   setNativeProps (props) {
     this._scrollComponent.setNativeProps(props)
+  }
+
+  componentDidMount() {
+    // On web, mousewheel will scroll in inverted direction by default.
+    // Therefore, add an event-listener which prevents default behaviour and scrolls in die opposite direction.
+    if (Platform.OS === 'web') {
+      const domNode = findNodeHandle(this._scrollComponent)
+      domNode.onwheel = (e) => this.onWheel(e, domNode)
+    }
+  }
+
+  onWheel (e, domNode) {
+    // Prevent default scroll and use inverted scroll
+    e.preventDefault()
+    let delta = e.deltaY
+    // firefox measures delta diffrently...
+    if (navigator.userAgent.toLowerCase().indexOf('firefox') > -1) {
+    	domNode.scrollTop -= delta * 30
+    } else {
+      domNode.scrollTop -= delta
+    }
   }
 
   render () {
