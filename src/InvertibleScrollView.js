@@ -20,7 +20,7 @@ class InvertibleScrollView extends Component {
   }
   static defaultProps = {
     inverted: true,
-    renderScrollComponent: props => <ScrollView {...props} />
+    renderScrollComponent: props => <ScrollView {...props} className='message-container'/>
   }
 
   getScrollResponder () {
