@@ -3975,10 +3975,6 @@ react-devtools-core@^2.5.0:
     shell-quote "^1.6.1"
     ws "^2.0.3"
 
-react-native-communications@2.2.1:
-  version "2.2.1"
-  resolved "https://registry.yarnpkg.com/react-native-communications/-/react-native-communications-2.2.1.tgz#7883b56b20a002eeb790c113f8616ea8692ca795"
-
 react-native-lightbox@^0.7.0:
   version "0.7.0"
   resolved "https://registry.yarnpkg.com/react-native-lightbox/-/react-native-lightbox-0.7.0.tgz#e52b4d7fcc141f59d7b23f0180de535e35b20ec9"

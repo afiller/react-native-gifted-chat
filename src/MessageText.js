@@ -4,7 +4,6 @@ import React from 'react';
 import { Linking, StyleSheet, Text, View, ViewPropTypes } from 'react-native';
 
 import ParsedText from 'react-native-parsed-text';
-import Communications from 'react-native-communications';
 
 const WWW_URL_PATTERN = /^www\./i;
 
@@ -45,10 +44,10 @@ export default class MessageText extends React.Component {
       (buttonIndex) => {
         switch (buttonIndex) {
           case 0:
-            Communications.phonecall(phone, true);
+            // Communications.phonecall(phone, true);
             break;
           case 1:
-            Communications.text(phone);
+            // Communications.text(phone);
             break;
           default:
             break;
@@ -58,7 +57,7 @@ export default class MessageText extends React.Component {
   }
 
   onEmailPress(email) {
-    Communications.email([email], null, null, null, null);
+    // Communications.email([email], null, null, null, null);
   }
 
   render() {
