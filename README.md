@@ -2,6 +2,16 @@
     <img alt="react-native-gifted-chat" src="https://thumbs.gfycat.com/AbsoluteSadDobermanpinscher-size_restricted.gif" width="260" height="510" />
 
 </p>
+## PM-GiftedChat Fork for Web-Compatibility
+
+# Changes made:
+* ToDo
+
+# CSS Classnames for custom styling:
+* bubble-container left: Outer Bubble Container (left)
+* bubble-container right: Outer Bubble Container (right)
+* bubble-wrapper left: Outer Bubble Container (left)
+* bubble-wrapper right: Outer Bubble Container (right)
 
 <h3 align="center">
   💬 Gifted Chat
