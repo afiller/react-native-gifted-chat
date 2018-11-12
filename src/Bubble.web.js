@@ -136,14 +136,14 @@ export default class Bubble extends React.Component {
   render() {
     return (
       <View
-        className={`bubble-container-${this.props.position}`}
+        className={`bubble-container-${this.props.position} ${this.props.containerClassName}`}
         style={[
           styles[this.props.position].container,
           this.props.containerStyle[this.props.position],
         ]}
       >
         <View
-          className={`bubble-wrapper-${this.props.position}`}
+          className={`bubble-wrapper-${this.props.position} ${this.props.wrapperClassName}`}
           style={[
             styles[this.props.position].wrapper,
             this.props.wrapperStyle[this.props.position],
