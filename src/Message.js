@@ -68,9 +68,8 @@ export default class Message extends React.Component {
     if (Platform.OS === 'web') {
       const sameUserAsPrev = isSameUser(this.props.currentMessage, this.props.previousMessage);
       const sameDayAsPrev = isSameDay(this.props.currentMessage, this.props.previousMessage);
-      let classSuffix = ''
-      if (sameUserAsPrev) classSuffix = ' same-user'
-      if (sameDayAsPrev) classSuffix = ' same-day'
+      if (sameUserAsPrev) classSuffix += ' same-user'
+      if (sameDayAsPrev) classSuffix += ' same-day'
     }
     
     return (
