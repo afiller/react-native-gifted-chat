@@ -64,7 +64,7 @@ export default class Message extends React.Component {
   render() {
     const sameUser = isSameUser(this.props.currentMessage, this.props.nextMessage);
     return (
-      <View>
+      <View className='message-container'>
         {this.renderDay()}
         {this.props.currentMessage.system ? (
           this.renderSystemMessage()
