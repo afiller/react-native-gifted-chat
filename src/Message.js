@@ -2,7 +2,7 @@
 
 import PropTypes from 'prop-types';
 import React from 'react';
-import { View, ViewPropTypes, StyleSheet } from 'react-native';
+import { View, ViewPropTypes, StyleSheet, Platform } from 'react-native';
 
 import Avatar from './Avatar';
 import Bubble from './Bubble';
@@ -63,9 +63,18 @@ export default class Message extends React.Component {
 
   render() {
     const sameUser = isSameUser(this.props.currentMessage, this.props.nextMessage);
-    const sameDay = isSameDay(this.props.currentMessage, this.props.previousMessage)
+    
+    let classSuffix = ''
+    if (Platform.OS === 'web') {
+      const sameUserAsPrev = isSameUser(this.props.currentMessage, this.props.previousMessage);
+      const sameDayAsPrev = isSameDay(this.props.currentMessage, this.props.previousMessage);
+      let classSuffix = ''
+      if (sameUserAsPrev) classSuffix = ' same-user'
+      if (sameDayAsPrev) classSuffix = ' same-day'
+    }
+    
     return (
-      <View className={`chat-message ${sameUser ? 'same-user' : ''} ${sameDay ? 'same-day' : ''}`}>
+      <View className={`chat-message${classSuffix}`}>
         {this.renderDay()}
         {this.props.currentMessage.system ? (
           this.renderSystemMessage()
