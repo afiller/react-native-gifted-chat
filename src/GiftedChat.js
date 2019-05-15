@@ -69,7 +69,7 @@ class GiftedChat extends React.Component {
     this.onMainViewLayout = this.onMainViewLayout.bind(this);
     this.onInitialLayoutViewLayout = this.onInitialLayoutViewLayout.bind(this);
 
-
+    // set removeClippedSubviews to false because of layout-bug, see: https://github.com/react-navigation/react-navigation/issues/1238
     this.invertibleScrollViewProps = {
       inverted: true,
       keyboardShouldPersistTaps: this.props.keyboardShouldPersistTaps,
@@ -77,6 +77,7 @@ class GiftedChat extends React.Component {
       onKeyboardWillHide: this.onKeyboardWillHide,
       onKeyboardDidShow: this.onKeyboardDidShow,
       onKeyboardDidHide: this.onKeyboardDidHide,
+      removeClippedSubviews: false
     };
   }
 
