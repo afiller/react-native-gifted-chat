@@ -8,7 +8,7 @@ import {
 } from 'react-native';
 
 import shallowequal from 'shallowequal';
-import InvertibleScrollView from 'react-native-invertible-scroll-view';
+import InvertibleScrollView from './InvertibleScrollView';
 import md5 from 'md5';
 import LoadEarlier from './LoadEarlier';
 import Message from './Message';
