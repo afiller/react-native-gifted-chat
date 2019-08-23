@@ -54,7 +54,7 @@ class InvertibleScrollView extends Component {
 
   _renderInvertedChildren (children, inversionStyle) {
     return React.Children.map(children, (child, index) => {
-      return child ? <View style={[inversionStyle, Platform.OS === 'iOS' ? {zIndex: children.length - index} : null]}>{child}</View> : child
+      return child ? <View style={[inversionStyle, Platform.OS === 'ios' ? {zIndex: children.length - index} : null]}>{child}</View> : child
     })
   }
 }
