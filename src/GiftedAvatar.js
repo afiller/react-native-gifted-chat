@@ -99,7 +99,19 @@ export default class GiftedAvatar extends React.Component {
           }}
           accessibilityTraits="image"
         >
-          {this.renderAvatar()}
+          <View style={{
+            elevation: 3,
+            shadowColor: '#076d08',
+            backgroundColor: '#076d08',
+            borderRadius: 18,
+            shadowOpacity: 0.3,
+            shadowRadius: 2,
+            shadowOffset: {
+              height: 4
+            }
+          }}>
+            {this.renderAvatar()}
+          </View>
         </TouchableOpacity>
       );
     }
